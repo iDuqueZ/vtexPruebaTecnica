@@ -1,0 +1,21 @@
+
+
+:global(.vtex-product-summary-2-x-element) :global(.vtex-button){
+    background-color: white;
+    border: solid black 0.5px;
+    transition: all 500ms ease-out;
+    color: black;
+    display: none;
+    margin: auto;
+    width: 90%;
+}
+
+:global(.vtex-product-summary-2-x-element):hover :global(.vtex-button) {
+    display: block;
+}
+
+:global(.vtex-product-summary-2-x-element) :global(.vtex-button):hover{
+    background-color: #E60000;
+    border-color: #E60000;
+    color: white;
+}

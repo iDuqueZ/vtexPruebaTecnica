@@ -1,0 +1,180 @@
+{
+  "store.home": { 
+    "blocks": [
+      "rich-text",
+      "rich-text#Titulo",
+      "tab-layout#home"
+    ]
+  },
+  "rich-text": { 
+    "props": { 
+      "text": "Segunda prueba técnica",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+    }
+  },
+  "rich-text#Titulo": { 
+    "props": { 
+      "text": "PRODUCTOS DESTACADOS",
+      "textAlignment": "CENTER",
+      "textPosition": "LEFT",
+      "font": "t-heading-4"
+    }
+  },
+
+  "tab-layout#home": {
+   "children": [
+     "tab-list#home",
+     "tab-content#home"
+   ],
+   "props": {
+     "blockClass": "home",
+     "defaultActiveTabId": "home1"
+   }
+  },
+  "tab-list#home": {
+       "children": [
+         "tab-list.item#home1",
+         "tab-list.item#home2",
+         "tab-list.item#home3",
+         "tab-list.item#home4",
+         "tab-list.item#home5"
+       ]
+     },
+     "tab-list.item#home1": {
+       "props": {
+         "tabId": "home1",
+         "label": "TENIS CASUALES",
+         "defaultActiveTab": true
+       }
+     },
+     "tab-list.item#home2": {
+      "props": {
+         "tabId": "home2",
+         "label": "SANDALIAS"
+       }
+     },
+     "tab-list.item#home3": {
+      "props": {
+         "tabId": "home3",
+         "label": "ZAPATOS FORMALES"
+       }
+     },
+     "tab-list.item#home4": {
+      "props": {
+         "tabId": "home4",
+         "label": "BOTAS"
+       }
+     },
+     "tab-list.item#home5": {
+      "props": {
+         "tabId": "home5",
+         "label": "TENIS DEPORTIVOS"
+       }
+     },
+     "tab-content#home": {
+         "children": [
+            "tab-content.item#home1",
+            "tab-content.item#home2",
+            "tab-content.item#home3",
+            "tab-content.item#home4",
+            "tab-content.item#home5"
+         ]
+       },
+       "tab-content.item#home1": {
+         "children": [
+           "list-context.product-list#demo1"
+         ],
+         "props": {
+           "tabId": "home1"
+         }
+       },
+       "tab-content.item#home2": {
+         "children": [
+           "list-context.product-list#demo1"
+         ],
+         "props": {
+           "tabId": "home2"
+         }
+       },
+       "tab-content.item#home3": {
+        "children": [
+          "list-context.product-list#demo1"
+        ],
+        "props": {
+          "tabId": "home3"
+        }
+      },"tab-content.item#home4": {
+        "children": [
+          "list-context.product-list#demo1"
+        ],
+        "props": {
+          "tabId": "home4"
+        }
+      },"tab-content.item#home5": {
+        "children": [
+          "list-context.product-list#demo1"
+        ],
+        "props": {
+          "tabId": "home5"
+        }
+      },
+
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf#demo1"],
+    "children": ["slider-layout#demo-products"]
+  },
+  "product-summary.shelf#demo1": {
+    "children": [
+      "product-summary-image",
+      "product-summary-sku-selector",
+      "product-summary-name",
+      "product-summary-price",
+       "product-summary-attachment-list",
+      "add-to-cart-button"
+    ]
+  },
+
+  "product-summary-image": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "1:1",
+        "mobile": "1:1"
+      }
+    }
+  },
+
+  "product-summary-sku-selector": {
+    "props": {
+      "initialSelection": 3
+    }
+  },
+
+  "add-to-cart-button": {
+    
+    "props" :{
+      "unavailableText": "Error al agregar producto",
+      "blockClass": "button"
+    }
+  },
+
+  "slider-layout#demo-products": {
+        "props": {
+            "itemsPerPage": {
+            "desktop": 4,
+            "tablet": 1,
+            "phone": 1
+          },
+         "infinite": true,
+         "showNavigationArrows": "mobileOnly",
+         "showPaginationDots": "never",
+          "blockClass": "carousel",
+          "autoplay": {
+            "timeout" : 9000,
+            "stopOnHover": true
+          }
+       }
+       
+     }
+}
